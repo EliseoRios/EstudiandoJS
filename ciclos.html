@@ -1,0 +1,37 @@
+<html>
+ <head>
+  <meta charset='utf8' name='funciones' content='funciones js'/>
+  <title>ciclos</title>
+ </head>
+ 
+ <body>
+  <script type='text/javascript'>
+   var contador = 0;
+  
+     do
+	{
+	 alert('Numero ' + contador +' con do-while');
+	 contador++;
+	}while(contador<4);
+	
+   var iterador = 0;
+   while(iterador<=2)
+   {
+	alert(iterador+' Ultima entrada con while');
+	iterador += 1;
+   } 
+	
+   for(var i=0;i<1;i++)
+   {
+     //código aquí
+	 alert(i +' for');
+   }
+  
+   var arreglo = [1,2,3];
+   for(posicion in arreglo)
+   {
+    alert('Forech en posicion '+posicion+' = '+arreglo[posicion]);
+   }
+  </script>
+ </body>
+</html>

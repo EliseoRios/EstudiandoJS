@@ -1,0 +1,33 @@
+<html>
+ <head>
+  <title>jquerySelector</title>
+  <meta charset='utf8' name='jquer_selectores' content='selectores 1 con jquery'/>
+  <script src='jquery.min.js' type='text/javascript'></script>
+  
+  <script>
+   $(document).on('ready',function(){
+     $('div').css({'background-color':'#070',});//pinta todos de verde
+	 $('div.midiv').css({'background-color':'red'});//pinta especificamente esa clase de div
+	 $('div.midiv article p.textoClase').text('este texto si cambió por clase');
+	 $('#textoId1, #textoId2, span').text('Estos son selectores avanzados');//cambia diversos separados por coma
+   });
+  </script>
+ </head>
+ <body>
+  <div class='midiv'>  
+   <article>
+    <p>Hola bienvenido</p>
+	<p class='textoClase'>este texto no ha cambiado</p>
+   </article>
+  </div>
+  
+  <div >
+   <article>
+    <p id='textoId1'>Parrafo uno no cambiado</p>
+	<p id='textoId2'>Parrafo dos no cambiado</p>
+   </article>
+  </div>
+  
+  <span></span>
+ </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+ <head>
+  <meta charset='utf8' name='funciones' content='funciones js'/>
+  <title>arreglos</title>
+ </head>
+ 
+ <body>
+  <script type='text/javascript'>
+   var arreglo = new Array();
+   
+   arreglo.push(3); //agrega indice 0
+   arreglo.push('Cadena para arreglo'); //agrega indice 1
+   
+   arreglo[0] = 'Reasignacion de variable en indice';
+   
+   //muestra en inspeccionarElemento/console el resultado
+   console.log(arreglo[0]); 
+   
+   
+   //arreglo predefinido
+   var arregloPredefinido = [1,2,3];
+   var longitudArreglo = arregloPredefinido.length;
+   console.log('Tamaño de predefinido: '+longitudArreglo);//longitud de arreglo
+   
+   console.log('Imprimiendo arreglo predefinido');
+   for(var i=0;i<longitudArreglo;i++)
+   {
+    console.log(arregloPredefinido[i]);
+   }
+   
+   //arreglo bidimencional
+   console.log('Imprimiendo arreglo bidimencional');
+   var arregloBidimencional = [[1,2,3],['a','b','c']];
+   
+   for(var i=0;i<arregloBidimencional.length;i++)
+   {
+     for(var j=0;j<arregloBidimencional[i].length;j++)
+	 {
+	  console.log(arregloBidimencional[i][j]); //imprimir bidimencional
+	 }
+	 
+	 //convertir arreglo a cadena
+	 var cadena = arregloBidimencional[i].join(''); 
+	 console.log('Con JOIN: '+cadena);
+   }
+   
+   //convertir cadena a arreglo
+   var NvaCadena = 'hola';
+   var arregloCadena = NvaCadena.split('');// '' va dentro donde debe separar
+   console.log('Imprimiendo Cadena a arreglo');
+   
+   for (var h=0;h<arregloCadena.length;h++)
+   {
+    console.log(arregloCadena[h]);
+   }
+   
+  </script>
+ </body>
+</html>

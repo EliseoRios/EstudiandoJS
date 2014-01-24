@@ -1,0 +1,44 @@
+<html>
+ <head>
+  <meta charset='utf8' name='funciones' content='funciones js'/>
+  <title>eventos</title>
+ </head>
+ 
+ <body>
+  <form>
+   <input type='button' name='boton' id='boton1' value='click aquí'/>
+  </form>
+  
+  <script type='text/javascript'>
+   window.addEventListener('load',funcionEjemplo);//parametro de evento(nombreEvento,accion) al cargar
+   window.addEventListener('keydown',tecla_presionada);
+   
+   var mi_boton = document.getElementById('boton1');
+   mi_boton.addEventListener('click',funcionBoton);//funcion externa
+   
+   /*
+   //funcion anonima
+    mi_boton.addEventListener('click',funcionBoton()
+	{acciones});
+   */
+   
+   function funcionEjemplo()
+   {
+     alert('Se ha cargado la página');
+   }
+   
+   function funcionBoton(eventos)
+   {
+     alert('Bienvenido con click');
+	 mi_boton.removeEventListener('click',funcionBoton);//remueve evento (evento,nombre)
+	 alert(eventos.type); //tipo de evento
+	 alert(eventos.screenX); //dice donde realizó evento
+   }
+   
+   function tecla_presionada()
+   {
+    alert(event.keyCode);//ver codigo ascii de tecla presionada
+   }
+  </script>
+ </body>
+</html>

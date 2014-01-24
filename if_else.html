@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" name="if_else" content="Pagina 2"/>
+  <title>JQUERY</title>
+ </head>
+ 
+ <body>
+ <header>if_else </header>
+  <script type="text/javascript">
+  var edad = 18;
+  var mensaje;
+  var boleana;
+  
+  //if else 
+   if(edad > 18)
+   {
+    mensaje = 'Mayor de edad';
+	boleana = true;
+   }
+   else if (edad < 18)
+   {
+    mensaje = 'Menor de edad';
+	boleana = false;
+   }
+   else
+   {
+    mensaje = 'Apenas pasas';
+	boleana = true;
+   }
+   
+   var aprobacion = boleana?' bienvenido':' largo no pasas';
+   
+   alert(mensaje + aprobacion);
+   
+   
+   //Condicional 
+   var opcion = 2;
+   switch(opcion)
+   {
+    case 1: 
+	 alert('Opcion '+opcion);
+	 break;
+	case 2:
+	 alert('Opcion '+opcion);
+	 break;
+	default:
+	 alert('Desconociodo');
+	 break;
+   }
+   
+  </script>
+ </body>
+</html>
